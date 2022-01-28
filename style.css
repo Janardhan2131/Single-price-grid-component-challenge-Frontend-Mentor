@@ -8,7 +8,7 @@ ul {
   list-style: none;
 }
 
-body {
+main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -55,22 +55,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.part1,
-.part3,
-.part2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .yellow {
   color: hsl(71, 73%, 54%);
   font-weight: bold;
   margin-bottom: 0.7rem;
-}
-
-.part1 ul {
-  line-height: 1.7;
 }
 
 .details {
@@ -95,17 +83,20 @@ span {
   color: rgb(233, 232, 232);
 }
 
-.part2 ul {
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
 .part3 ul {
   line-height: 1.4;
   font-size: 0.85rem;
   color: rgba(230, 248, 247, 0.8);
 }
-button {
+
+p {
+  line-height: 1.7;
+}
+
+.signup:link,
+.signup:visited {
+  text-decoration: none;
+  text-align: center;
   display: inline-block;
   color: white;
   background-color: hsl(71, 73%, 54%);
@@ -127,18 +118,23 @@ button {
     border-radius: 0 0 10px 10px;
   }
 
-  button {
+  .signup {
     width: 100%;
+  }
+
+  .part2 h3,
+  .part2 p {
+    margin-bottom: 1rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  body {
+  main {
     padding: 0;
   }
 
   article {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     margin: 0;
   }
 
@@ -149,6 +145,9 @@ button {
 
   .part2 {
     border-radius: 0 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .part3 {
